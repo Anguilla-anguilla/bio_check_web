@@ -6,3 +6,4 @@ class FoodAdditives(models.Model):
     common_title = models.CharField(max_length=125)
     category = models.CharField(max_length=125)
     description = models.TextField()
+    is_dangerous = models.BooleanField()
