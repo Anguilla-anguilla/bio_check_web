@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from models import FoodAdditives
 
 def fa_list(request):
@@ -12,5 +12,16 @@ def fa_list(request):
     return render(request, template_name, context)
 
 
-def fa_detail(request):
-    pass
+def fa_detail(request, pk):
+    template_name = 'catalog/fa_detail.html'
+    fa_card = get_object_or_404(
+        FoodAdditives.objects.values('e_title',
+                                      'common_title',
+                                      'category',
+                                      'description'),
+        pk=pk
+        )
+    context = {
+        'fa_card': fa_card,
+    }
+    return render(request, template_name, context)
