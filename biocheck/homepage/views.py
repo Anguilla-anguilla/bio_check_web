@@ -2,5 +2,15 @@ from django.shortcuts import render
 
 
 def index(request):
-    template_name = 'homepage/index.html'
-    return render(request, template_name)
+    template = 'homepage/index.html'
+    return render(request, template)
+
+
+def contacts(request):
+    template = 'homepage/contacts.html'
+    return render(request, template)
+
+
+def about(request):
+    template = 'homepage/about.html'
+    return render(request, template)
