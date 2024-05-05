@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from models import FoodAdditives
+from .models import FoodAdditives
 
 def fa_list(request):
     template_name = 'catalog/fa_list.html'
