@@ -4,6 +4,7 @@
     {% with request.resolver_match.view_name as view_name %}
     <!-- Тут - то, как будет осуществляться переключение по кнопкам-->
     <!-- Нужно добавить потом в <a> class="{% if view_name == 'homepage:homepage'%} active {% endif %}"-->
+    <fieldset>
     <ul>
         <li>
             <a href="{% url 'homepage:homepage' %}">
@@ -34,6 +35,7 @@
             </a>
         </li>
     </ul>
+</fieldset>
     {% endwith %}
     </div>
 </header>
