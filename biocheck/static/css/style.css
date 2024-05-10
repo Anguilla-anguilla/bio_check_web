@@ -1,12 +1,80 @@
-body {
-    background-color: rgb(210, 237, 210);
-}
+/* Общий блок */
 
-.text {
+body {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
-    /* font-weight: <weight>; */
-    /* font-style: normal; */
-    font-variation-settings:
-        "slnt" 0;
+    color: white;
+    background-image: url('../img/main.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: center;
+}
+
+
+.link {
+    list-style: none;
+    text-decoration: none;
+}
+
+
+/* Блок для навигации */
+
+.nav {
+    display: flex;
+    height: 81px;
+    font-size: 20px;
+    background-color: #758D54;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu-left {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-left: 0px;
+}
+
+.menu-center {
+    list-style: none;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-right: 400px;
+    margin-left: 150px;
+}
+
+.menu-right {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+
+.nav-box {
+    width: 100px;
+    height: 81px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    gap: 0px;
+}
+
+.nav-box:hover {
+    background-color: #506038;
+}
+
+.nav-box.active {
+    background-color: #506038;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    margin: 0 20px;
 }
