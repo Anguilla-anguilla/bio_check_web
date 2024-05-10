@@ -2,6 +2,7 @@
 
 body {
     font-family: "Inter", sans-serif;
+    font-weight: 500;
     font-optical-sizing: auto;
     color: white;
     background-image: url('../img/main.jpeg');
@@ -10,14 +11,15 @@ body {
     background-attachment: center;
 }
 
-
-.link {
-    list-style: none;
-    text-decoration: none;
+.conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
 }
 
 
-/* Блок для навигации */
+/* header */
 
 .nav {
     display: flex;
@@ -77,4 +79,36 @@ body {
     text-decoration: none;
     color: white;
     margin: 0 20px;
+    list-style: none;
+}
+
+/* index */
+
+h1 {
+    font-size: 50px;
+    border: 1px;
+    border-color: black;
+    margin-left: 60px;
+}
+
+.index-text {
+    font-size: 22px;
+    line-height: 26px;
+    align-items: center;
+}
+
+.index-box {
+    width: 300px;
+    height: 98px;
+    margin-left: 40px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3A6547;
+    border-radius: 21px;
+}
+
+.index-box:hover {
+    background-color: #284631;
 }

@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 <div>
-<h1>Главная страница</h1>
-<p>текст</p>
-<a href="{% url 'catalog:fa_list' %}">
-<button>Кнопачка)))</button>
+<h1>BioCheck</h1>
+<p class="index-text">текст, который потом переделают</p>
+<div class="index-box">
+<a class="link" href="{% url 'catalog:fa_list' %}">
+    Перейти к поиску
 </a>
+</div>
 </div>
 {% endblock %}

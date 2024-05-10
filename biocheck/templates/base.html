@@ -13,12 +13,14 @@
 </head>
 
 <body class="body">
-    <!-- Включим навигацию -->
-    {% include "includes/header.html" %}
+        <!-- Включим навигацию -->
+        {% include "includes/header.html" %}
+    <div class="conteiner">
+        
+        {% block content %}
+        {% endblock %}
 
-    
-    {% block content %}
-    {% endblock %}
+    </div>
 </body>
 
 </html>
