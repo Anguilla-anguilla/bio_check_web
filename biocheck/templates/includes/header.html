@@ -23,19 +23,21 @@
             </li>
             <li>
                 <a class="link nav-box {% if view_name == 'catalog:fa_list' %}active{% endif %}" href="{% url 'catalog:fa_list' %}">
-                    <img src="{% static 'img/logo.png' %}" alt="Каталог" height="81 px">
+                    <img src="{% static 'img/logo.png' %}" alt="Каталог" height="67px">
                 </a>
             </li>
         </div>
         <div class="menu-center">
             <li>
-            <strong>Еда - это то, что мы едим.</strong>
+            <span id="position-fixed">
+                <strong>Еда - это то, что мы едим.</strong>
+            </span>
             </li>
         </div>
         <div class="menu-right">
             <li>
                 <a>
-                    <img src="{% static 'img/tg.png' %}" alt="Ссылка на тележку" height='61 px'>
+                    <img src="{% static 'img/tg.png' %}" alt="Ссылка на тележку" height='60 px'>
                 </a>
             </li>
         </div>

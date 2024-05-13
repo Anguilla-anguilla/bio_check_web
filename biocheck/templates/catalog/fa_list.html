@@ -1,12 +1,14 @@
 <!--Тут будет выводиться список добавок-->
 {% extends "base.html" %}
 {% block content %}
-<h2>Список добавок<h2>
-<div>
-    <form action="get">
-        <label for="search">Поиск</label>
-        <input id="search" type="text" name="search" placeholder="Поиск">
-        <input type="submit">
-    </form>
+<div class="container">
+    <h2>Список добавок<h2>
+    <div>
+        <form action="get">
+            <label for="search">Поиск</label>
+            <input id="search" type="text" name="search" placeholder="Поиск">
+            <input type="submit">
+        </form>
+    </div>
 </div>
 {% endblock content %}
