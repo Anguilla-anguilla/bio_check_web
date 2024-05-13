@@ -1,6 +1,28 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
 <div class="container">
-Обратная связь
+    <div class="contacts-container">
+        <div class="contacts-upper-box">
+            <p class="contacts-main-text">ВЫ МОЖЕТЕ С НАМИ СВЯЗАТЬСЯ:</p>
+            <p class="contacts-main-text">Какой-то телефон</p>
+            <p class="contacts-main-text">Какая-то почта</p>
+        </div>
+        <br>
+        <br>
+        <br>
+        <p> <img src="{% static 'img/tg.png' %}" height='60 px'> Наш телеграм-бот:
+            <br> Призыв к действию!
+        </p>
+
+        <br>
+        <br>
+        <br>
+        <p>Воодушевляющие слова!</p>
+    </div>
+    <div>
+
+    </div>
 </div>
+
 {% endblock %}
