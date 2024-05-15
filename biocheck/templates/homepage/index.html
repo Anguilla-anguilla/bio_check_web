@@ -1,11 +1,12 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
 <div class="index-conteiner">
     <div>
         <h1>BioCheck</h1>
         <p class="index-text">текст, который потом переделают</p>
         <a class="index-box link" href="{% url 'catalog:fa_list' %}">
-            Перейти к поиску
+            Перейти к поиску <img src="{% static 'img/logo.png' %}" height="50px">
         </a>
     </div>
 </div>

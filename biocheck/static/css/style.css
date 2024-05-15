@@ -5,10 +5,10 @@ body {
     font-weight: 500;
     font-optical-sizing: auto;
     color: white;
-    background-image: url('../img/main.jpeg');
+    background-image: url('../img/main.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: center;
+    background-attachment: fixed;
 }
 
 h1 {
@@ -54,7 +54,7 @@ h2 {
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: stretch;
     margin-left: 0px;
 }
 
@@ -65,13 +65,14 @@ h2 {
     justify-content: center;
     margin-right: 400px;
     margin-left: 150px;
+    flex-shrink: 0;
 }
 
 .menu-right {
     list-style: none;
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: flex-end;
 }
 
 
@@ -81,8 +82,6 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 0px;
-    gap: 0px;
 }
 
 .nav-box:hover {
