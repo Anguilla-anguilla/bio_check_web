@@ -7,14 +7,15 @@ class FoodAdditives(models.Model):
     category = models.CharField(max_length=125, verbose_name='категория')
     description = models.TextField(verbose_name='описание', blank=True)
     is_dangerous = models.BooleanField(verbose_name='опасна')
-    is_not_informative = models.BooleanField(
-        verbose_name='нет информации по добавке',
-        default=False
+    is_informative = models.BooleanField(
+        verbose_name='есть информация по добавке',
+        default=True
         )
 
     class Meta:
-        verbose_name = 'пищевая добавка'
+        verbose_name = 'объект "пищевая добавка"'
         verbose_name_plural = 'Пищевые добавки'
 
     def __str__(self):
-        return self.e_title
+        title = str(self.e_title)
+        return title
