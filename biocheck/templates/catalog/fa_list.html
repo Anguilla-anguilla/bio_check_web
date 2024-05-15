@@ -4,15 +4,15 @@
 <div class="container">
     <h2>Список добавок</h2>
     <div>
-        <form action="get">
+        <form action="" method="get">
             <label for="search">Поиск</label>
-            <input id="search" type="text" name="search" placeholder="Поиск">
-            <input type="submit">
+            <input id="searchbox" type="search" name="search" placeholder="Поиск">
+            <input type="submit" value="Поиск">
         </form>
     </div>
     <div>
         {% for fa in fa_catalog %}
-        <p><a href="{% url 'catalog:fa_detail' fa.id %}">E{{ fa.e_title }} {{ fa.common_title }} {{ fa.category }}</a></p>
+        <p><a href="{% url 'catalog:fa_detail' fa.id %}">E {{ fa.e_title }} {{ fa.common_title }} {{ fa.category }}</a></p>
         {% endfor %}
     </div>
 </div>
