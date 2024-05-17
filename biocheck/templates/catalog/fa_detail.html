@@ -2,7 +2,17 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
-Карточка
-{{ fa_card.e_title }}
+    <div class="f-a-detail-card">
+        <div class="f-a-detail-card-left">
+            <p>{{ fa_card.e_title }}</p>
+        </div>
+        <div class="f-a-detail-card-center">
+            <p>{{ fa_card.common_title}}</p>
+            <p>{{ fa_card.description}}</p>
+        </div>
+        <div class="f-a-detail-card-right">
+            <p>{{ fa_card.category}}</p>
+    </div>
+    </div>
 </div>
 {% endblock  %}
