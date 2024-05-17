@@ -1,5 +1,9 @@
 /* Общий блок */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Inter", sans-serif;
     font-weight: 500;
@@ -44,49 +48,52 @@ h2 {
 
 /* header */
 
+
 .nav {
-    display: flex;
-    height: 67px;
-    font-size: 20px;
+    position: relative;
+    font-size: 16px;
     background-color: #758D54;
 }
 
 .menu {
-    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .menu-left {
-    list-style: none;
+    position: absolute;
     display: flex;
-    align-items: center;
-    justify-content: stretch;
-    margin-left: 0px;
+    float: left;
 }
 
 .menu-center {
-    list-style: none;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    margin-right: 400px;
-    margin-left: 150px;
-    flex-shrink: 0;
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .menu-right {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    float: right;
+    margin-right: 10px;
+    margin-top: 2px;
 }
 
-
 .nav-box {
-    width: 100px;
-    height: 67px;
+    position: relative;
+    width: 120px;
+    height: 57px;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
 }
 
 .nav-box:hover {
@@ -100,7 +107,6 @@ h2 {
 .link {
     text-decoration: none;
     color: white;
-    margin: 0 20px;
     list-style: none;
 }
 
@@ -235,9 +241,7 @@ h2 {
     border-radius: 10px;
 }
 
-* {
-    box-sizing: border-box;
-}
+
 
 form {
     position: relative;
