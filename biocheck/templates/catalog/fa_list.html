@@ -1,18 +1,19 @@
 <!--Тут будет выводиться список добавок-->
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
-<div class="container">
-    <h2>Список добавок</h2>
-    <div>
+<div class="container list-block">
+    <div class="search-box">
         <form action="" method="get">
-            <label for="search">Поиск</label>
-            <input id="searchbox" type="search" name="search" placeholder="Поиск">
-            <input type="submit" value="Поиск">
+            <input id="searchbox" type="search" name="search" placeholder="Введите наименование пищевой добавки">
+            <button type="submit"><img src="{% static 'img/search.png' %}" height="40px"></button>
         </form>
     </div>
     <div>
         {% for fa in fa_catalog %}
+        <div>
         <p><a href="{% url 'catalog:fa_detail' fa.id %}">E {{ fa.e_title }} {{ fa.common_title }} {{ fa.category }}</a></p>
+        </div>
         {% endfor %}
     </div>
 </div>
