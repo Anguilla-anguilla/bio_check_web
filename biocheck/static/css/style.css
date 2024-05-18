@@ -31,6 +31,8 @@ h2 {
 
 
 .container {
+    width: 1100px;
+    height: 430px;
     position: fixed;
     display: flex;
     align-items: center;
@@ -210,22 +212,25 @@ h2 {
 
 /* contacts */
 
-.contacts-container {
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
-    flex-direction: column;
-}
-
 .contacts-upper-box {
     margin-left: 50px;
     margin-right: 50px;
 }
 
 .contacts-main-text {
-    font-size: 20px;
+    font-size: 25px;
     border: 3px;
     border-color: black;
+    text-align: center;
+}
+
+.telegram-text {
+    display: flex;
+}
+
+.telegram-text-right-box {
+    margin-left: 10px;
+    margin-top: 12px;
 }
 
 /* fa_list */
