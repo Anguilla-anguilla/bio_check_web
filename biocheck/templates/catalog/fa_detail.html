@@ -2,17 +2,21 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
-    <div class="f-a-detail-card">
-        <div class="f-a-detail-card-left">
-            <p>{{ fa_card.e_title }}</p>
+    <div class="f-a-detail-card f-a-text">
+        <div class="scroll">
+            <table>
+                <tr>
+                    <th>{{ fa_card.e_title }}</th>
+                    <th>{{ fa_card.common_title}}</th>
+                    <th>{{ fa_card.category}}</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>{{ fa_card.description}}</td>
+                    <td></td>
+                </tr>
+            </table>
         </div>
-        <div class="f-a-detail-card-center">
-            <p>{{ fa_card.common_title}}</p>
-            <p>{{ fa_card.description}}</p>
-        </div>
-        <div class="f-a-detail-card-right">
-            <p>{{ fa_card.category}}</p>
-    </div>
     </div>
 </div>
-{% endblock  %}
+{% endblock %}
