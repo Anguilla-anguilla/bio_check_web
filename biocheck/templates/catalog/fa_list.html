@@ -11,13 +11,23 @@
     </div>
     <div class="scroll">
         {% for fa in fa_catalog %}
-        <div class="f-a-list">
-        <ul class="list-block">
-            <li>
-                <p><a class="f-a-link" href="{% url 'catalog:fa_detail' fa.id %}">E {{ fa.e_title }} {{ fa.common_title }} {{ fa.category }}</a></p>
-            </li>    
-        </ul>
-        </div>
+        <a class="f-a-link" href="{% url 'catalog:fa_detail' fa.id %}">
+            <div class="f-a-list">   
+                <ul class="list-block"> 
+                    <li>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>E {{ fa.e_title }}</td>
+                                    <td>{{ fa.common_title }}</td>
+                                    <td>{{ fa.category }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>       
+            </div>
+        </a> 
         {% endfor %}
     </div>
 </div>
