@@ -17,8 +17,10 @@
                     <li>
                         <table>
                             <tr>
-                                <td>E {{ fa.e_title }}</td>
-                                <td>{{ fa.common_title }}</td>
+                                <td>{{ fa.e_title }}</td>
+                                <td>
+                                    {{ fa.common_title| truncatewords:3 }}
+                                </td>
                                 <td>{{ fa.category }}</td>
                             </tr>
                         </table>
