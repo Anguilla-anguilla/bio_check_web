@@ -20,7 +20,6 @@ def fa_list(request):
     return render(request, template_name, context)
 
 
-
 def fa_detail(request, pk):
     template_name = 'catalog/fa_detail.html'
     fa_card = get_object_or_404(
