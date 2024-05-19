@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'homepage.apps.HomepageConfig',
     'catalog.apps.CatalogConfig',
     'debug_toolbar',
+    'import_export',
 ]
 
 MIDDLEWARE = [

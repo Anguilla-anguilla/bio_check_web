@@ -1,8 +1,18 @@
 from django.contrib import admin
+from import_export.admin import ImportExportActionModelAdmin
+from import_export.widgets import ForeignKeyWidget
+from import_export import resources
+from import_export import fields
 from .models import FoodAdditives
 
 
-class FoodAdditivesAdmin(admin.ModelAdmin):
+class FAResourse(resources.ModelResource):
+    class Meta:
+        model = FoodAdditives
+
+
+class FoodAdditivesAdmin(ImportExportActionModelAdmin):
+    resource_class = FAResourse
     list_display = (
         'e_title',
         'common_title',
@@ -25,3 +35,4 @@ class FoodAdditivesAdmin(admin.ModelAdmin):
 
 
 admin.site.register(FoodAdditives, FoodAdditivesAdmin)
+
