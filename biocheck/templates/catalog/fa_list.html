@@ -2,33 +2,36 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div class="container list-block">
+  <div class="container list-block">
     <div class="search-box">
-        <form action="" method="get">
-            <input id="searchbox" type="search" name="search" placeholder="Введите наименование пищевой добавки">
-            <button type="submit"><img src="{% static 'img/search.png' %}" height="40px"></button>
-        </form>
+      <form action="" method="get">
+        <input 
+          id="searchbox" type="search" name="search" 
+          placeholder="Введите наименование пищевой добавки"
+          >
+        <button type="submit">
+          <img src="{% static 'img/search.png' %}" height="40px">
+        </button>
+      </form>
     </div>
     <div class="scroll">
-        {% for fa in fa_catalog %}
+      {% for fa in fa_catalog %}
         <a class="f-a-link" href="{% url 'catalog:fa_detail' fa.id %}">
-            <div class="f-a-list">   
-                <ul class="list-block"> 
-                    <li>
-                        <table>
-                            <tr>
-                                <td>{{ fa.e_title }}</td>
-                                <td>
-                                    {{ fa.common_title| truncatewords:3 }}
-                                </td>
-                                <td>{{ fa.category }}</td>
-                            </tr>
-                        </table>
-                    </li>
-                </ul>       
-            </div>
+          <div class="f-a-list">   
+            <ul class="list-block"> 
+              <li>
+                <table>
+                  <tr>
+                    <td>{{ fa.e_title }}</td>
+                    <td>{{ fa.common_title| truncatewords:3 }}</td>
+                    <td>{{ fa.category }}</td>
+                  </tr>
+                </table>
+              </li>
+            </ul>       
+          </div>
         </a> 
-        {% endfor %}
+      {% endfor %}
     </div>
-</div>
+  </div>
 {% endblock content %}

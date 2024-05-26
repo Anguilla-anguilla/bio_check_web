@@ -4,14 +4,16 @@ from .models import FoodAdditives
 
 
 def fa_list(request):
-    template_name = 'catalog/fa_list.html'             
-    fa_catalog = FoodAdditives.objects.values( 'id',
-        'e_title', 'common_title', 'category'
-        ).order_by('e_title')
+    template_name = 'catalog/fa_list.html'
+    fa_catalog = FoodAdditives.objects.values('id',
+                                              'e_title',
+                                              'common_title',
+                                              'category'
+                                              ).order_by('e_title')
     query = request.GET.get('search')
     if query:
         fa_catalog = fa_catalog.filter(
-            Q(e_title__icontains=query) | 
+            Q(e_title__icontains=query) |
             Q(common_title__icontains=query)
         )
     context = {
@@ -24,9 +26,9 @@ def fa_detail(request, pk):
     template_name = 'catalog/fa_detail.html'
     fa_card = get_object_or_404(
         FoodAdditives.objects.values('e_title',
-                                      'common_title',
-                                      'category',
-                                      'description'),
+                                     'common_title',
+                                     'category',
+                                     'description'),
         pk=pk
         )
     context = {

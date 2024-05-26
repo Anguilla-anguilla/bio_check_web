@@ -1,8 +1,6 @@
 from django.contrib import admin
 from import_export.admin import ImportExportActionModelAdmin
-from import_export.widgets import ForeignKeyWidget
 from import_export import resources
-from import_export import fields
 from .models import FoodAdditives
 
 
@@ -35,4 +33,3 @@ class FoodAdditivesAdmin(ImportExportActionModelAdmin):
 
 
 admin.site.register(FoodAdditives, FoodAdditivesAdmin)
-

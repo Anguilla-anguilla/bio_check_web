@@ -1,46 +1,63 @@
 {% load static %}
 <header>
-    <!-- Тут будет навигация -->
-    <div>
+  <div>
     {% with request.resolver_match.view_name as view_name %}
-    <nav class="nav">
-    <ul class="menu">
-        <div class="menu-left">
+      <nav class="nav">
+        <ul class="menu">
+          <div class="menu-left">
             <li>
-                <a class="link nav-box {% if view_name == 'homepage:homepage' %}active{% endif %}" href="{% url 'homepage:homepage' %}">
-                    Главная
-                </a>
+              <a
+                class="link nav-box {% if view_name == 'homepage:homepage' %}
+                active{% endif %}" href="{% url 'homepage:homepage' %}"
+                >
+                  Главная
+              </a>
             </li>
             <li>
-                <a  class="link nav-box {% if view_name == 'homepage:about' %}active{% endif %}" href="{% url 'homepage:about' %}">
-                    О нас  
-                </a>
+              <a 
+                class="link nav-box {% if view_name == 'homepage:about' %}
+                active{% endif %}" href="{% url 'homepage:about' %}"
+                >
+                  О нас  
+              </a>
             </li>
             <li>
-                <a  class="link nav-box {% if view_name == 'homepage:contacts' %}active{% endif %}" href="{% url 'homepage:contacts' %}">
-                    Контакты
-                </a>
+              <a 
+                class="link nav-box {% if view_name == 'homepage:contacts' %}
+                active{% endif %}" href="{% url 'homepage:contacts' %}"
+                >
+                  Контакты
+              </a>
             </li>
             <li>
-                <a class="link nav-box {% if view_name == 'catalog:fa_list' %}active{% endif %}" href="{% url 'catalog:fa_list' %}">
-                    <img src="{% static 'img/logo.png' %}" alt="Каталог" height="45px">
-                </a>
+              <a 
+                class="link nav-box {% if view_name == 'catalog:fa_list' %}
+                active{% endif %}" href="{% url 'catalog:fa_list' %}"
+                >
+                  <img
+                   src="{% static 'img/logo.png' %}"
+                    alt="Каталог" height="45px"
+                   >
+              </a>
             </li>
-        </div>
-        <div class="menu-center">
+          </div>
+          <div class="menu-center">
             <li>
-            <strong>Мы - это то, что мы едим.</strong>
+              <strong>Мы - это то, что мы едим.</strong>
             </li>
-        </div>
-        <div class="menu-right">
+          </div>
+          <div class="menu-right">
             <li>
-                <a>
-                    <img src="{% static 'img/tg.png' %}" alt="Ссылка на тележку" height='50px'>
-                </a>
+              <a>
+                <img
+                  src="{% static 'img/tg.png' %}" 
+                  alt="Ссылка на тележку" height='50px'
+                  >
+              </a>
             </li>
-        </div>
-    </ul>
-</nav>
+          </div>
+        </ul>
+      </nav>
     {% endwith %}
-    </div>
+  </div>
 </header>

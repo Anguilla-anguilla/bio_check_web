@@ -1,14 +1,14 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div class="index-conteiner">
+  <div class="index-conteiner">
     <div>
-        <h1>BioCheck</h1>
-        <p class="index-text">проект о пищевых добавках</p>
-        <a class="index-box link" href="{% url 'catalog:fa_list' %}">
-            <img src="{% static 'img/logo.png' %}" height="50px"> 
-            &nbsp; ПЕРЕЙТИ К ПОИСКУ
-        </a>
+      <h1>BioCheck</h1>
+      <p class="index-text">проект о пищевых добавках</p>
+      <a class="index-box link" href="{% url 'catalog:fa_list' %}">
+        <img src="{% static 'img/logo.png' %}" height="50px"> 
+        &nbsp; ПЕРЕЙТИ К ПОИСКУ
+      </a>
     </div>
-</div>
+  </div>
 {% endblock %}
